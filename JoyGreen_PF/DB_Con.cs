@@ -289,15 +289,15 @@ namespace JoyGreen_PF
 
         public string EditUrl(String url, int checkHttpsYn, string portNo)
         {
-            /////url을 규격을 맞춘다. http:// 나 https://를 http://로 통일한다. www는 없엔다. 아디비번 없에고www2는 붙이고 
+            /////url을 규격을 맞춘다. 
             String editUrl = "";
             String finalEditUrl = "";
             String firstUrl = "";
             String httpUrl = "";
 
             int my_p_Port = 0;///EditUrl 에서 포트값을 넣어준다.. sp에서 url의 포트를 요청한다.
-            string my_p_FILE = "/";///EditUrl 에서 p_FILE : sex.com뒤에 전체 url다인대... ?뒤는 생략한다.
-            string my_p_FRAG = "/";///EditUrl 에서 p_FRAG : sex.com뒤에 전체 url다...
+            string my_p_FILE = "/";
+            string my_p_FRAG = "/";
             int i = 0;
 
 
