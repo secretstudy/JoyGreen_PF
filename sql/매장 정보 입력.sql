@@ -1,0 +1,14 @@
+use JoyGreen_PF
+
+
+--INSERT INTO TBL_JG_STORE ( [ID], [PW], [COM_NO])
+--VALUES ('test02', '1234', 3)
+
+--SET IDENTITY_INSERT TBL_JG_STORE ON -- IDENTITY_INSERT 활성화
+--
+--INSERT INTO TBL_JG_STORE (STORE_IDX, [ID], [PW], [COM_NO])
+--VALUES (2, 'test03', '1234', 2) -- 원하는 STORE_IDX 값을 직접 지정하여 삽입
+--
+--SET IDENTITY_INSERT TBL_JG_STORE OFF -- IDENTITY_INSERT 비활성화
+
+--select * from TBL_JG_STORE
