@@ -85,23 +85,19 @@ namespace JoyGreen_PF
 
     public class GoEditUrl
     {
-
-        //private static GoEditUrl goEditUrl = new GoEditUrl();
-
-        private string p_FILE;///EditUrl 에서 p_FILE
-        private string p_FRAG;///EditUrl 에서 p_FILE
-        private int p_PORT = 0;///EditUrl 에서 포트값을 넣어준다.. sp에서 url의 포트를 요청한다.
+        private string p_FILE;
+        private string p_FRAG;
+        private int p_PORT = 0;
         private string tempUrl;
-        //private string p_PLIAN_Cr_URL;
         private int storeIdx;
         private int myComNo;
         private string currentUrl;
-        private int blockBrowser;///0: 익스 1:크롬 2:파이어폭스 3:엣지, 크롬은 현재폼에서 차단을 해야한다. 폼이 hide되어 있으면 차단기능이 작동하지 않는다.
-        private string blockUrl;///차단url임..
-        private int blockYN;//차단 알람을 띄워줄지 확인하다.
+        private int blockBrowser;
+        private string blockUrl;
+        private int blockYN;
         private string movingUrl;
-        private int blockCrYn = 0;//form1에 크롬 타이머를 조절한다. 크롬을 차단중일때 중복차단하지 않는다.
-        private int blockFfYn = 0;//form1에 파이어폭스 타이머를 조절한다. 파이어폭스을 차단중일때 중복차단하지 않는다.
+        private int blockCrYn = 0;
+        private int blockFfYn = 0;
         private int blockTimCr = 0;
         private string dnsIp;
         private string dnsIp2;
@@ -295,7 +291,7 @@ namespace JoyGreen_PF
             String firstUrl = "";
             String httpUrl = "";
 
-            int my_p_Port = 0;///EditUrl 에서 포트값을 넣어준다.. sp에서 url의 포트를 요청한다.
+            int my_p_Port = 0;
             string my_p_FILE = "/";
             string my_p_FRAG = "/";
             int i = 0;
@@ -331,7 +327,7 @@ namespace JoyGreen_PF
                 }
                 else if (i > 2)
                 {
-                    if (i == splitUrls.Length - 1)///마지막에는 "/"를 붙이지 않는다.
+                    if (i == splitUrls.Length - 1)
                     {
                         my_p_FRAG += splitUrl;
                     }

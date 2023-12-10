@@ -39,9 +39,9 @@ namespace JoyGreen_PF
         string fireFoxUrl = string.Empty;
 
         // Object & Child ID 관리
-        const uint DEFAULT_CHROME_OBJECT_ID = 4294967292; // Fix
-        const uint DEFAULT_CHROME_CHILD_ID = 4294967295; // ↓
-        const uint DEFAULT_CHROME_CHILD_STEP = 100; // 400 Step, 중간에 혼합되어 있어 100Step로 처리함
+        const uint DEFAULT_CHROME_OBJECT_ID = 4294967292;
+        const uint DEFAULT_CHROME_CHILD_ID = 4294967295; 
+        const uint DEFAULT_CHROME_CHILD_STEP = 100; 
 
         const int VK_RETURN = 0x0D;
         const int MK_LBUTTON = 0x0001;
@@ -631,7 +631,7 @@ namespace JoyGreen_PF
                 // 모든 Chrome가 종료되었을경우 새창은 Default값으로 시작됨.
                 m_uiLastChromeChildID = DEFAULT_CHROME_CHILD_ID;
             }
-        }
+        }//public void CheckChromeObjects()
 
         // 등록된 ChromeObject 목록에서 검색된 hWnd를 검색한다.
         private uint GetChildIDFromChromeObject(IntPtr hWnd)
@@ -654,7 +654,7 @@ namespace JoyGreen_PF
         // 핸들과 ID를 가지고 URL을 얻는다.
         private bool GetURLChromeBrowser(IntPtr hWnd, uint uiID, bool bFixID = false)
         {
-            Accessibility.IAccessible iAccessible;
+            IAccessible iAccessible;
             object ChildId;
 
             int iSearchCount = 0;
@@ -749,7 +749,7 @@ namespace JoyGreen_PF
                 break;
             }
             return false;
-        }
+        }//private bool GetURLChromeBrowser(IntPtr hWnd, uint uiID, bool bFixID = false)
 
         private void AddChromeObject(IntPtr hWnd, uint uiChildID)
         {
@@ -813,7 +813,7 @@ namespace JoyGreen_PF
                 }
             }           
             MovingChrome_http(url);
-        }
+        }//private void blockChrome()
 
         public void MovingChrome_http(string goNotifyUrl)
         {
@@ -848,9 +848,9 @@ namespace JoyGreen_PF
             finally
             {
             }
-        }
+        }//public void MovingChrome_http(string goNotifyUrl)
 
-        
+
         public void MovingChrome(string goNotifyUrl)
         {
             try
@@ -895,7 +895,7 @@ namespace JoyGreen_PF
             finally
             {
             }
-        }        
+        }//public void MovingChrome(string goNotifyUrl)        
 
         /////////////////////////////////////
         ///// 파이어폭스 검색 및 관리 ///////
@@ -938,7 +938,8 @@ namespace JoyGreen_PF
 
             
             return blockFireFoxYN;
-        }
+        }//private string blockFireFoxYN()
+
         private void SearchFireFox()
         {
             try
@@ -1012,9 +1013,9 @@ namespace JoyGreen_PF
             {
 
             }
-        }
+        }//private void SearchFireFox()
 
-        
+
 
 
     }//public partial class Form1 : Form
